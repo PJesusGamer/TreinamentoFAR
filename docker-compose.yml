@@ -4,6 +4,19 @@ services:
   web:
     build: .
     container_name: treinamentoFAR
-    ports:
-      - "80:80"
+    #ports:
+    #  - "80:80"
     restart: always
+
+    labels:
+      # Traefik
+      - "traefik.enable=true"
+
+      # LoadBalancer
+      - "traefik.http.services.FAR.loadbalancer.server.port=80"
+
+      # External
+      - "traefik.http.routers.FAR-external.rule=Host(`far.shadowmage.com.br`)"
+      - "traefik.http.routers.FAR-external.entrypoints=websecure"
+      - "traefik.http.routers.FAR-external.tls.certresolver=shadowmageresolver"
+      - "traefik.http.routers.FAR-external.service=FAR"
