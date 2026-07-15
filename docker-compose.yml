@@ -20,3 +20,6 @@ services:
       - "traefik.http.routers.FAR-external.entrypoints=websecure"
       - "traefik.http.routers.FAR-external.tls.certresolver=shadowmageresolver"
       - "traefik.http.routers.FAR-external.service=FAR"
+
+    networks: 
+      - subnet_FAR
