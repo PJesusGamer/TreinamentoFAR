@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  web:
+  far:
     build: .
     container_name: treinamentoFAR
     #ports:
@@ -23,3 +23,8 @@ services:
 
     networks: 
       - subnet_FAR
+
+networks:
+  subnet_FAR:
+    name: subnet_FAR
+    driver: bridge
