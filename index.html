@@ -1,315 +1,374 @@
-<!DOCTYPE html><html class="dark" lang="pt-BR" style=""><head>
+<!DOCTYPE html><html class="dark scroll-smooth" lang="pt-BR" style=""><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>TREINAMENTO FAR | Pare de Viver no Piloto Automático</title>
+<title>Método FAR | Assuma o Controle</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<!-- Tailwind Configuration -->
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-secondary-fixed": "#1b1b1b",
-                    "surface-tint": "#ecc246",
-                    "on-tertiary-fixed-variant": "#454747",
-                    "surface-container": "#231f17",
-                    "secondary-container": "#474747",
-                    "surface-container-highest": "#39342b",
-                    "primary-fixed": "#ffe08e",
-                    "on-surface-variant": "#d1c5af",
-                    "tertiary-fixed-dim": "#c6c6c7",
-                    "on-tertiary-container": "#3b3d3d",
-                    "primary-fixed-dim": "#ecc246",
-                    "on-primary-container": "#4b3a00",
-                    "tertiary-container": "#a6a7a7",
-                    "secondary-fixed-dim": "#c6c6c6",
-                    "error": "#ffb4ab",
-                    "gold-light": "#E5C86C",
-                    "neutral-gray": "#1A1A1A",
-                    "on-tertiary-fixed": "#1a1c1c",
-                    "on-primary": "#3d2e00",
-                    "on-secondary": "#303030",
-                    "on-secondary-container": "#b5b5b5",
-                    "error-container": "#93000a",
-                    "surface-deep": "#0A0A0A",
-                    "surface-container-high": "#2e2a21",
-                    "on-primary-fixed-variant": "#584400",
-                    "on-primary-fixed": "#241a00",
-                    "secondary": "#c6c6c6",
-                    "background": "#16130b",
-                    "outline-variant": "#4d4635",
-                    "on-tertiary": "#2f3131",
-                    "inverse-on-surface": "#343027",
-                    "on-error": "#690005",
-                    "primary": "#ecc246",
-                    "tertiary": "#c6c6c7",
-                    "on-secondary-fixed-variant": "#474747",
-                    "surface-dim": "#16130b",
-                    "secondary-fixed": "#e2e2e2",
-                    "surface": "#16130b",
-                    "on-surface": "#eae1d4",
-                    "gold-dark": "#8C6D15",
-                    "on-error-container": "#ffdad6",
-                    "on-background": "#eae1d4",
-                    "surface-bright": "#3d392f",
-                    "surface-container-low": "#1f1b13",
-                    "primary-container": "#c9a227",
-                    "outline": "#99907b",
-                    "inverse-surface": "#eae1d4",
-                    "surface-variant": "#39342b",
-                    "tertiary-fixed": "#e2e2e2",
-                    "inverse-primary": "#755b00",
-                    "surface-container-lowest": "#110e07"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "section-padding-desktop": "160px",
-                    "container-max-width": "1140px",
-                    "section-padding-mobile": "80px",
-                    "gutter": "24px",
-                    "stack-space": "32px"
-            },
-            "fontFamily": {
-                    "headline-xl": ["Playfair Display"],
-                    "body-lg": ["Inter"],
-                    "body-md": ["Inter"],
-                    "headline-xl-mobile": ["Playfair Display"],
-                    "button": ["Inter"],
-                    "label-caps": ["Inter"],
-                    "display-lg-mobile": ["Playfair Display"],
-                    "display-lg": ["Playfair Display"],
-                    "headline-md": ["Playfair Display"]
-            },
-            "fontSize": {
-                    "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                    "body-lg": ["20px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "300"}],
-                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "headline-xl-mobile": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
-                    "button": ["14px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
-                    "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.2em", "fontWeight": "600"}],
-                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
-                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "headline-md": ["32px", {"lineHeight": "1.4", "fontWeight": "500"}]
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#353534",
+                        "surface-tint": "#eac166",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-background": "#e5e2e1",
+                        "on-tertiary-container": "#3d3c3c",
+                        "surface-container-low": "#1c1b1b",
+                        "secondary-fixed": "#e2e2e2",
+                        "secondary-container": "#454747",
+                        "surface-container": "#201f1f",
+                        "on-primary-container": "#4e3900",
+                        "on-secondary-container": "#b4b5b5",
+                        "on-primary-fixed-variant": "#5b4300",
+                        "error-container": "#93000a",
+                        "error": "#ffb4ab",
+                        "on-error": "#690005",
+                        "primary-container": "#c8a24a",
+                        "on-surface-variant": "#d1c5b2",
+                        "inverse-surface": "#e5e2e1",
+                        "inverse-primary": "#785a00",
+                        "surface-variant": "#353534",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "primary-fixed-dim": "#eac166",
+                        "outline": "#9a8f7e",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-tertiary": "#303030",
+                        "inverse-on-surface": "#313030",
+                        "outline-variant": "#4d4637",
+                        "on-secondary-fixed-variant": "#454747",
+                        "surface-dim": "#131313",
+                        "primary": "#eac166",
+                        "tertiary-fixed": "#e4e2e1",
+                        "on-primary": "#3f2e00",
+                        "surface": "#131313",
+                        "secondary": "#c6c6c7",
+                        "on-secondary": "#2f3131",
+                        "subtle-gray": "#888888",
+                        "background": "#131313",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed": "#ffdf9c",
+                        "on-primary-fixed": "#251a00",
+                        "on-surface": "#e5e2e1",
+                        "tertiary": "#c8c6c5",
+                        "pain-red": "#B22222",
+                        "surface-bright": "#3a3939",
+                        "surface-container-high": "#2a2a2a",
+                        "tertiary-container": "#a9a7a6",
+                        "gold": "#C8A24A",
+                        "black-bg": "#111111",
+                        "card-bg": "#2A2A2A"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max-width": "1200px",
+                        "stack-md": "32px",
+                        "section-gap-mobile": "80px",
+                        "stack-sm": "16px",
+                        "stack-lg": "64px",
+                        "section-gap": "160px",
+                        "gutter": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Manrope", "sans-serif"],
+                        "display-lg": ["Manrope", "sans-serif"],
+                        "body-md": ["Hanken Grotesk", "sans-serif"],
+                        "body-lg": ["Hanken Grotesk", "sans-serif"],
+                        "headline-lg-mobile": ["Manrope", "sans-serif"],
+                        "label-caps": ["Manrope", "sans-serif"],
+                        "headline-lg": ["Manrope", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "label-caps": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    },
+                    "backgroundImage": {
+                        'hero-gradient': 'linear-gradient(to bottom, rgba(17, 17, 17, 0.4) 0%, rgba(17, 17, 17, 1) 100%)',
+                    }
+                }
             }
-          },
-        },
-      }
+        }
     </script>
 <style>
-        body {
-            background-color: #000000;
-            color: #eae1d4;
-            scroll-behavior: smooth;
-        }
-        .text-gold-gradient {
-            background: linear-gradient(to right, #C9A227, #E5C86C, #C9A227);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .border-gold {
-            border-image: linear-gradient(to bottom, #C9A227, transparent) 1;
-        }
-        .shimmer-hover:hover {
-            box-shadow: 0 0 20px rgba(201, 162, 39, 0.4);
-            transform: translateY(-2px);
-            transition: all 0.3s ease;
-        }
-        .reveal {
+        body { background-color: #111111; color: #ffffff; }
+        .fade-in-up {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
-        .reveal.active {
+        .fade-in-up.visible {
             opacity: 1;
             transform: translateY(0);
         }
+        .gold-glow:hover {
+            box-shadow: 0 0 15px rgba(200, 162, 74, 0.3);
+        }
     </style>
 </head>
-<body class="font-body-md overflow-x-hidden">
-<!-- Header Navigation -->
-<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/10 px-gutter py-6">
-<div class="max-w-container-max-width mx-auto flex justify-between items-center">
-<span class="font-headline-md text-headline-md font-bold tracking-tighter text-primary">TREINAMENTO FAR</span>
-<div class="hidden md:flex gap-8 items-center">
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#metodo">O Método</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#jornada">A Jornada</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#resultados">Resultados</a>
-<a class="font-label-caps text-label-caps bg-primary text-on-primary px-6 py-3 rounded-full hover:bg-gold-light transition-all shimmer-hover" href="#contato">SOLICITAR ANALISE</a>
+<body class="font-body-md antialiased text-on-surface bg-background overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-surface-variant transition-all duration-300">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max-width mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: &quot;FILL&quot; 1;">navigation</span>
+<span class="font-headline-md text-headline-md font-bold tracking-tighter text-primary">MÉTODO FAR</span>
 </div>
-<button class="md:hidden text-primary">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</nav>
-<!-- Section 1: Hero -->
-<header class="relative min-h-screen flex items-center justify-center pt-24 px-gutter text-center overflow-hidden"><div class="absolute inset-0 z-0">
-  <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9bJtz_52n86Ijf23ghGxR5GAwoKgUsT-98yXN1yZ7IOS6vPNdDnXlKxRQxNc53LpwjadNISYGWJdwc0BFx5WRNm-Id8tTCgZxU0jGpaxxz6Gu9ZTYTLGtQ5HvwaQA6MWhP07HnMh6fM5YftL6XgpStuVOcSzeKpcVZefgzNM0ZxT9Z3KxMnW0uLAbArBMBh-DAl8xTEJq89ViqQELQoWLuv1CIDuGXJUl0BTR_Ec6NGvUmpaQVIXq" alt="" class="w-full h-full object-cover">
-  <div class="absolute inset-0 bg-black/60 bg-black/80"></div>
-</div>
-
-<div class="relative z-10 max-w-4xl space-y-stack-space">
-<span class="font-label-caps text-label-caps text-primary tracking-[0.5em] block reveal active">A JORNADA DA TRANSFORMAÇÃO</span>
-<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg leading-tight reveal delay-100 active">
-                PARE DE VIVER NO <br>
-<span class="text-gold-gradient italic">PILOTO AUTOMÁTICO</span>
-</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto reveal delay-200 active"></p><div class="">Você não está perdido. Você apenas passou tanto tempo sobrevivendo que esqueceu como assumir o controle da própria vida</div><div><br></div>Você não precisa de mais conhecimento. Você precisa de direção.<div><br></div><div class="">Você não precisa de mais motivação. Você precisa de uma decisão.</div><div><br></div><div class="">Você não precisa de mais uma segunda-feira. Você precisa voltar a assumir o controle da sua vida pessoal e profissional</div><p class=""></p>
-<div class="reveal delay-300 active">
-<a class="inline-block font-button text-button bg-primary text-on-primary px-10 py-5 rounded-full shimmer-hover uppercase" href="#contato">
-                    QUERO SAIR DO PILOTO AUTOMÁTICO
+<div>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdm_M6hYDae4DBIYM6CzVYaNSHphMNjXPMi5ADybQVpLU5Hvw/viewform?usp=dialog" target="_blank"class="inline-flex items-center justify-center font-label-caps text-label-caps bg-primary-container text-on-primary-container rounded-lg px-6 py-3 hover:scale-105 transition-transform duration-200" href="#cta">
+                    QUERO COMEÇAR
                 </a>
 </div>
-</div>
-<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-<span class="material-symbols-outlined text-primary">keyboard_double_arrow_down</span>
 </div>
 </header>
-<!-- Section 2: A Dor -->
-<section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter bg-surface-deep">
-<div class="max-w-container-max-width mx-auto flex flex-col md:flex-row gap-16 items-center">
-<div class="w-full md:w-1/2 relative group reveal active">
-<div class="absolute -inset-4 border border-primary/20 scale-95 group-hover:scale-100 transition-transform duration-500"></div>
-<img class="w-full h-[600px] object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" data-alt="A moody, high-contrast black and white photograph of a high-achieving professional looking out of a skyscraper window at night. The lighting is low and atmospheric, with subtle golden highlights reflecting on the glass, capturing a sense of profound introspection and the quiet burden of unfulfilled potential in a luxury setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKmceRm_8co-ZodscjemkIfAhZz9lqAndBFMX7OchlSkcssAfXxw5lww2T5lO81QbxonlZBrsisixpsUdgbepyFwpHreKGu-QCIX_VaFAOYqDhOhExEQjPkDHtBdbTpLAlR0FEbLaZzIGkz25brKvPjnHCCIe4tYPLyAkVFRbkEj_GA_lmuByNS73ZtY0Zcft9t0jOSthf_WQAoXfrz9eCW2J3RUdy9PqWl4z_kJUAzinCJctPkADW">
+<main class="pt-[80px]">
+<!-- 1. HERO -->
+<section class="relative min-h-[90vh] flex items-center justify-center pt-20 pb-32 px-gutter overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40" data-alt="A cinematic, high-contrast medium shot of a focused man in silhouette against a large window overlooking a city at dawn. The light is golden and inspiring, representing a new beginning. Deep shadows and a luxurious, minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4NjVocFBmUR2fc4HqXtRPTQqhQSgHM8BlrlS86a_Srml9iOltDBBWEZlVJHQhgVweZd4jtIEQXpDZdqJAHwBPUTrDYT-7HzNqv015w5gD5Mv5sTFCVv05OqRuVXbaBuMITa6ZKJ6qPDMU-rMN4gzsRaMnlzSM63BJgVBlu4aHdm-WEeF4vTdIBztgW-VTqyu64_17LHaDWVNk7aWv0XaMWzZ-Zk4aejI2QTvB2SUtplAxMlXOnlKWqKjOLqO5N-Mv">
+<div class="absolute inset-0 bg-hero-gradient"></div>
 </div>
-<div class="w-full md:w-1/2 space-y-8 reveal delay-200 active">
-<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface leading-tight">
-                    Quanto da sua vida você já perdeu <span class="text-primary italic">esperando?</span>
-</h2>
-<div class="space-y-6 text-on-surface-variant font-body-lg">
-<p class="">Você acorda, cumpre tarefas, atende expectativas e deita com a sensação de que o dia foi apenas uma repetição do anterior.</p>
-<p class="border-l-2 border-primary pl-6 py-2 italic font-light">
-                        "O maior custo da vida não é financeiro. É o tempo que você gasta fingindo que está satisfeito enquanto sua ambição morre aos poucos."
-                    </p>
-<p class="">Quanto tempo da sua vida você ainda está disposto a perder?</p>
-</div>
-<div class="pt-6">
-<a class="font-button text-button border border-primary text-primary px-8 py-4 rounded-lg hover:bg-primary hover:text-on-primary transition-all uppercase inline-block" href="#contato">
-                        EU QUERO MUDAR
-                    </a>
-</div>
-</div>
-</div>
-</section>
-<!-- Section 3: FAR Method -->
-<section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter" id="metodo"><div class="max-w-container-max-width mx-auto text-center mb-24"><h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl mb-6 reveal active">O FAR NÃO É MAIS UM CURSO</h2><p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto reveal delay-100 active">O FAR é uma jornada de transformação de 90 dias. Uma experiência profunda de autoconhecimento, consciência e ação.</p></div><div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-24"><div class="bg-surface-container-lowest p-10 border-l border-primary group hover:bg-surface-container transition-colors reveal delay-100 active"><span class="material-symbols-outlined text-4xl text-primary mb-6" style="font-variation-settings: &quot;FILL&quot; 1;">priority_high</span><h3 class="font-headline-md text-2xl mb-4 group-hover:text-gold-light transition-colors uppercase">Decisões</h3><p class="text-on-surface-variant leading-relaxed">As decisões que você vem adiando e que travam seu progresso.</p></div><div class="bg-surface-container-lowest p-10 border-l border-primary group hover:bg-surface-container transition-colors reveal delay-200 active"><span class="material-symbols-outlined text-4xl text-primary mb-6" style="font-variation-settings: &quot;FILL&quot; 1;">block</span><h3 class="font-headline-md text-2xl mb-4 group-hover:text-gold-light transition-colors uppercase">Padrões</h3><p class="text-on-surface-variant leading-relaxed">Os padrões repetitivos que estão destruindo silenciosamente a sua evolução.</p></div><div class="bg-surface-container-lowest p-10 border-l border-primary group hover:bg-surface-container transition-colors reveal delay-300 active"><span class="material-symbols-outlined text-4xl text-primary mb-6" style="font-variation-settings: &quot;FILL&quot; 1;">warning</span><h3 class="font-headline-md text-2xl mb-4 group-hover:text-gold-light transition-colors uppercase">Desculpas</h3><p class="text-on-surface-variant leading-relaxed">As desculpas que estão mantendo sua vida exatamente no mesmo lugar.</p></div><div class="bg-surface-container-lowest p-10 border-l border-primary group hover:bg-surface-container transition-colors reveal delay-400 active"><span class="material-symbols-outlined text-4xl text-primary mb-6" style="font-variation-settings: &quot;FILL&quot; 1;">visibility</span><h3 class="font-headline-md text-2xl mb-4 group-hover:text-gold-light transition-colors uppercase">Coragem</h3><p class="text-on-surface-variant leading-relaxed">A versão de você que ainda não teve coragem de se tornar.</p></div></div><div class="max-w-2xl mx-auto text-center"><p class="font-body-lg text-on-surface-variant italic reveal delay-500 active">Não é um treinamento para aprender mais. É um treinamento para finalmente começar a agir.</p></div></section>
-<!-- Section 4: Resultados / Timeline -->
-<section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter bg-surface-container-low" id="resultados">
-<div class="max-w-container-max-width mx-auto">
-<div class="text-center mb-16">
-<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl reveal active">EM 90 DIAS MUITA COISA PODE ACONTECER</h2>
-</div>
-<div class="relative py-12">
-<!-- Timeline Line -->
-<div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-[1px] bg-outline-variant/30 md:-translate-x-1/2"></div>
-<!-- Day 01 -->
-<div class="relative mb-24 flex flex-col md:flex-row items-center reveal active">
-<div class="w-full md:w-1/2 md:pr-16 text-left md:text-right mb-8 md:mb-0 pl-6">
-<span class="font-label-caps text-primary block mb-2">DIA 01 - O IMPACTO</span>
-<h4 class="font-headline-md text-2xl mb-4">A Quebra do Ciclo</h4>
-<p class="text-on-surface-variant">Confronto imediato com a realidade. O fim das mentiras que você conta para si mesmo para se sentir confortável na mediocridade.</p>
-</div>
-<div class="absolute left-[-8px] md:left-1/2 w-4 h-4 bg-primary rounded-full md:-translate-x-1/2 shadow-[0_0_15px_rgba(201,162,39,0.8)]"></div>
-<div class="w-full md:w-1/2 md:pl-16"></div>
-</div>
-<!-- Day 45 -->
-<div class="relative mb-24 flex flex-col md:flex-row items-center reveal delay-100 active">
-<div class="w-full md:w-1/2 md:pr-16"></div>
-<div class="absolute left-[-8px] md:left-1/2 w-4 h-4 bg-primary rounded-full md:-translate-x-1/2 shadow-[0_0_15px_rgba(201,162,39,0.8)]"></div>
-<div class="w-full md:w-1/2 md:pl-16 text-left pl-6">
-<span class="font-label-caps text-primary block mb-2">DIA 45 - A FORJA</span>
-<h4 class="font-headline-md text-2xl mb-4">A Reconstrução Identitária</h4>
-<p class="text-on-surface-variant">Onde a maioria desiste, você se fortalece. Seus novos hábitos não são mais um esforço, são quem você é agora.</p>
-</div>
-</div>
-<!-- Day 90 -->
-<div class="relative flex flex-col md:flex-row items-center reveal delay-200 active">
-<div class="w-full md:w-1/2 md:pr-16 text-left md:text-right mb-8 md:mb-0 pl-6">
-<span class="font-label-caps text-primary block mb-2">DIA 90 - A SOBERANIA</span>
-<h4 class="font-headline-md text-2xl mb-4">O Domínio FAR</h4>
-<p class="text-on-surface-variant">Clareza total, foco cirúrgico e resultados tangíveis. Você não apenas saiu do piloto automático, você assumiu o controle total.</p>
-</div>
-<div class="absolute left-[-8px] md:left-1/2 w-4 h-4 bg-primary rounded-full md:-translate-x-1/2 shadow-[0_0_15px_rgba(201,162,39,0.8)]"></div>
-<div class="w-full md:w-1/2 md:pl-16"></div>
-</div>
-</div>
-<div class="mt-24 text-center reveal active">
-<a class="inline-block font-button text-button bg-primary text-on-primary px-12 py-6 rounded-full shimmer-hover uppercase" href="#contato">
-                    QUERO COMEÇAR AGORA
+<div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center gap-stack-md fade-in-up visible">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-display-lg md:text-display-lg text-primary uppercase tracking-tight">
+                    VOCÊ NÃO ESTÁ SEM CAPACIDADE.&nbsp;<div>ESTÁ SEM DIREÇÃO.
+                </div></h1>
+<p class="font-body-lg text-body-lg text-on-surface max-w-2xl">
+                    Pare de viver no automático e assuma o controle da sua vida através do Método FAR.
+                </p>
+<p class="font-body-md text-body-md text-subtle-gray max-w-xl"></p><div class="">Mais do que motivação. Um processo criado para eliminar a procrastinação, recuperar sua direção e construir uma identidade capaz de sustentar resultados.</div><p class=""></p>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdm_M6hYDae4DBIYM6CzVYaNSHphMNjXPMi5ADybQVpLU5Hvw/viewform?usp=dialog" target="_blank" class="mt-stack-sm inline-flex items-center justify-center font-label-caps text-label-caps bg-primary-container text-black-bg font-bold rounded-lg px-8 py-4 hover:scale-105 transition-transform duration-200 gold-glow" href="#cta">
+                    QUERO ASSUMIR O CONTROLE
                 </a>
 </div>
+</section>
+<!-- 2. A DOR -->
+<section class="py-section-gap-mobile md:py-section-gap px-gutter max-w-container-max-width mx-auto">
+<div class="grid md:grid-cols-2 gap-stack-lg items-center">
+<div class="fade-in-up order-2 md:order-1 visible">
+<img class="w-full h-auto object-cover rounded-xl border border-surface-variant" data-alt="A moody, high-contrast photograph of a man sitting in shadow, looking stressed or contemplative, surrounded by unfinished tasks in a dimly lit, minimalist workspace. The lighting is cinematic with deep blacks." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqFWZ1FwNPRSNt7Ef5bsW1NTR5TfMjWClF8RLujw3FUWbU2Yun4CCQ37WDA-jFMHWKO_eGjneD8frvvL68tKvpXaKNacEcNW0F2dRJ8L79vFRgQX2uSNcZf7S631dx6_17q94xCc_Sn-3fwN3OyTPiTRSHoBBuj9j_LW0E0oUxTwjbiPq7ODO75qLBStAeV02dqUPGDGPNk7S_LlbPyLEX1Za-Ikazp1MAANMjkJVhruIasFauXxKSwxDS70Rw8UAy">
+</div>
+<div class="flex flex-col gap-stack-sm fade-in-up order-1 md:order-2 visible">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary uppercase">
+                        QUANTO TEMPO MAIS VOCÊ VAI ADIAR A SUA PRÓPRIA VIDA?
+                    </h2>
+<p class="font-body-lg text-body-lg text-on-surface"></p><div class="">Você sabe que pode mais. Sabe que tem potencial e sabe exatamente o que precisa fazer. Mesmo assim, continua adiando decisões importantes. Os dias passam, os meses passam e sua vida continua praticamente igual.</div><div class="">Você promete que vai começar. Faz planos, assiste vídeos, compra cursos… mas depois de alguns dias tudo volta ao mesmo lugar.</div><div class="">O problema nunca foi falta de inteligência ou capacidade. O problema é continuar vivendo sem direção. Cada promessa quebrada diminui sua confiança. Cada decisão adiada fortalece a procrastinação. E cada dia no automático afasta você da vida que poderia estar construindo.</div><p class=""></p>
+<p class="font-body-lg text-body-lg text-primary font-bold mt-4 border-l-2 border-primary pl-4">
+                        Quanto da sua vida você ainda está disposto a perder antes de decidir mudar?
+                    </p>
+</div>
 </div>
 </section>
-<!-- Section 5: Leads / Capture -->
-<section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter relative overflow-hidden" id="contato">
-<div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
-<div class="max-w-4xl mx-auto reveal active">
-<div class="text-center mb-16">
-<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl mb-6">Receba uma análise personalizada</h2>
-<p class="font-body-lg text-on-surface-variant">Nem todos estão prontos para o FAR. Preencha os detalhes abaixo para avaliarmos se você se encaixa no perfil de alta performance que buscamos.</p>
+<!-- 3. A IDENTIFICAÇÃO -->
+<section class="py-section-gap-mobile md:py-section-gap px-gutter bg-surface-container-low border-y border-surface-variant relative overflow-hidden">
+<div class="max-w-container-max-width mx-auto">
+<div class="text-center mb-stack-lg fade-in-up visible">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary uppercase">
+                        VOCÊ SE IDENTIFICA?
+                    </h2>
 </div>
-<form action="https://docs.google.com/forms/d/e/1FAIpQLSdm_M6hYDae4DBIYM6CzVYaNSHphMNjXPMi5ADybQVpLU5Hvw/viewform?usp=dialog" target="_blank" class="bg-surface-container-low p-8 md:p-12 border border-outline-variant/10 rounded-xl"><div class="flex flex-col items-center space-y-6">
-  <button class="w-full md:w-auto md:px-16 font-button text-button bg-primary text-on-primary py-5 rounded-lg shimmer-hover uppercase" type="submit">SOLICITAR ANÁLISE DE PERFIL</button>
-  <p class="text-center text-[10px] text-on-surface-variant/50 uppercase tracking-widest">Garantimos a total confidencialidade dos seus dados.</p>
-</div></form>
+<div class="grid md:grid-cols-5 gap-stack-lg items-center">
+<div class="md:col-span-3 flex flex-col gap-stack-md fade-in-up visible">
+<ul class="flex flex-col gap-stack-sm"><li class="flex items-start gap-4"><span class="material-symbols-outlined text-primary mt-1">check_circle</span><span class="font-body-lg text-body-lg text-on-surface">Você começa e desiste.</span></li><li class="flex items-start gap-4"><span class="material-symbols-outlined text-primary mt-1">check_circle</span><span class="font-body-lg text-body-lg text-on-surface">Vive ocupado, mas sente que não evolui.</span></li><li class="flex items-start gap-4"><span class="material-symbols-outlined text-primary mt-1">check_circle</span><span class="font-body-lg text-body-lg text-on-surface">Procrastina decisões importantes.</span></li><li class="flex items-start gap-4"><span class="material-symbols-outlined text-primary mt-1">check_circle</span><span class="font-body-lg text-body-lg text-on-surface">Falta disciplina para manter o que começa.</span></li><li class="flex items-start gap-4"><span class="material-symbols-outlined text-primary mt-1">check_circle</span><span class="font-body-lg text-body-lg text-on-surface">Vive cansado mentalmente.</span></li><li class="flex items-start gap-4"><span class="material-symbols-outlined text-primary mt-1">check_circle</span><span class="font-body-lg text-body-lg text-on-surface">Sente que perdeu o controle da própria vida.</span></li><li class="flex items-start gap-4"><span class="material-symbols-outlined text-primary mt-1">check_circle</span><span class="font-body-lg text-body-lg text-on-surface">Sabe que poderia estar vivendo muito melhor.</span></li></ul>
+<p class="font-body-lg text-body-lg text-primary font-bold mt-4">
+                            Se você respondeu “sim” para alguma dessas situações, o Método FAR foi desenhado exatamente para o seu momento.
+                        </p>
+</div>
+<div class="md:col-span-2 fade-in-up visible">
+<img class="w-full h-auto object-cover rounded-xl border border-surface-variant" data-alt="A man looking intently into a mirror in a clean, modern bathroom or dressing area. The reflection shows determination. High-contrast lighting, minimalist environment, sophisticated dark aesthetic with white walls and dark fixtures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_Ia7dTIMIbEg2zQLP9PaP_WsNQAojU5ascsWOsTgrg9rDam7k13AyKV1WuGk-9fuq8oL8yNjcLXH_Xnt7vT_gti3FBRCaiBtrSV7eJjtrnT1EEuPy_HFa4BC14etKGJ-sPMvyr_MJRajODlMHCk9qQJ1QpJietpaiI5x3mN7s-8iaKeLHRafhGcRiwQJXHv4kB4isY8P5JEVFuDXf3UngAJxjO9MzXj7qvteuR_OAOxxm26BvAvZsXPE62bEBWLKt">
+</div>
+</div>
 </div>
 </section>
-<!-- Section 6: Footer -->
-<footer class="w-full py-section-padding-mobile md:py-section-padding-desktop px-gutter flex flex-col items-center gap-stack-space text-center bg-surface-container-lowest border-t border-outline-variant/10">
-<div class="space-y-6 max-w-2xl">
-<span class="font-headline-md text-headline-md text-primary font-bold tracking-tighter">TREINAMENTO FAR</span>
-<p class="font-body-md text-on-surface-variant italic">"A mediocridade é uma escolha silenciosa. A excelência é um grito de guerra."</p>
-<div class="flex gap-6 justify-center">
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Instagram</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">LinkedIn</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">YouTube</a>
+<!-- 4. A TRANSFORMAÇÃO -->
+<section class="py-section-gap-mobile md:py-section-gap px-gutter max-w-container-max-width mx-auto">
+<div class="grid md:grid-cols-2 gap-stack-lg items-center">
+<div class="fade-in-up visible">
+<img class="w-full h-auto object-cover rounded-xl border border-primary" data-alt="A powerful, wide-angle cinematic shot from behind a man standing confidently on a path looking towards a bright, golden sunset over a landscape. The colors are rich golds, deep oranges, and blacks, symbolizing achievement and clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR5St2Rha5UN7-1qXG4yX106LEIqgoimqhBDe75aMnURRXnXt_C6RzGWGgZFQQPGUd2wlESp1lCrY-UXU2s53OBpNBOFc6adSCbKfMtNvlzpL8KQ5N2NoWlhIgJBgQNrhOYe31iFB_2M1fe9GE2vW5JC-p5uZO__gPnVffnfV0tWkbjEVBah6YrVWEe72z0rBdgd3bntH3FSIRGWbiPoOn1nBwzN_iIbi3nPCx8nAjLEacDKfOo5YGMMgst1T_dvdx">
+</div>
+<div class="flex flex-col gap-stack-sm fade-in-up visible">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary uppercase">
+                        IMAGINE SUA VIDA DAQUI A 90 DIAS
+                    </h2>
+<p class="font-body-lg text-body-lg text-on-surface"></p><div class="">Imagine acordar sabendo exatamente qual direção seguir. Confiar novamente em você.&nbsp;</div><div class="">Cumprir aquilo que promete.&nbsp;</div><div class="">Criar hábitos consistentes.&nbsp;</div><div class="">Parar de depender da motivação e sentir orgulho da pessoa que está se tornando.<br></div><p class=""></p>
+<p class="font-body-lg text-body-lg text-primary font-bold mt-4">
+                        Essa é a transformação que o Método FAR foi desenvolvido para construir.
+                    </p>
 </div>
 </div>
-<div class="pt-12 border-t border-outline-variant/10 w-full flex flex-col md:flex-row justify-between items-center gap-4">
-<p class="font-label-caps text-[10px] text-on-surface-variant">© 2026 TREINAMENTO FAR. TODOS OS DIREITOS RESERVADOS. A EXCLUSIVIDADE É O PADRÃO.</p>
+</section>
+<!-- 5. O MÉTODO FAR -->
+<section class="py-section-gap-mobile md:py-section-gap px-gutter bg-surface-container-low border-y border-surface-variant">
+<div class="max-w-container-max-width mx-auto">
+<div class="text-center mb-stack-lg fade-in-up flex flex-col items-center gap-4 visible">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-display-lg md:text-display-lg text-primary uppercase">
+                        O MÉTODO FAR
+                    </h2>
+<p class="font-body-lg text-body-lg text-on-surface max-w-2xl">
+                        Durante aproximadamente 90 dias, você percorrerá uma jornada prática dividida em quatro etapas.
+                    </p>
+</div>
+<!-- Bento Grid / Cards -->
+<div class="grid md:grid-cols-4 gap-stack-sm">
+<!-- FOCO -->
+<div class="bg-card-bg border-t border-primary p-6 rounded-lg flex flex-col items-center text-center gap-4 fade-in-up gold-glow transition-shadow duration-300 visible">
+<div class="w-16 h-16 rounded-full bg-background flex items-center justify-center border border-surface-variant">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: &quot;FILL&quot; 0;">my_location</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-subtle-gray tracking-widest mb-1">— 01 —</p>
+<h3 class="font-headline-md text-headline-md text-primary uppercase">FOCO</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface">Descubra os padrões que estão atrasando sua vida.</p>
+</div>
+<!-- AÇÃO -->
+<div class="bg-card-bg border-t border-primary p-6 rounded-lg flex flex-col items-center text-center gap-4 fade-in-up gold-glow transition-shadow duration-300 visible" style="transition-delay: 100ms;">
+<div class="w-16 h-16 rounded-full bg-background flex items-center justify-center border border-surface-variant">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: &quot;FILL&quot; 0;">rocket_launch</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-subtle-gray tracking-widest mb-1">— 02 —</p>
+<h3 class="font-headline-md text-headline-md text-primary uppercase">AÇÃO</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface">Transforme consciência em atitudes práticas.</p>
+</div>
+<!-- RESULTADO -->
+<div class="bg-card-bg border-t border-primary p-6 rounded-lg flex flex-col items-center text-center gap-4 fade-in-up gold-glow transition-shadow duration-300 visible" style="transition-delay: 200ms;">
+<div class="w-16 h-16 rounded-full bg-background flex items-center justify-center border border-surface-variant">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: &quot;FILL&quot; 0;">monitoring</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-subtle-gray tracking-widest mb-1">— 03 —</p>
+<h3 class="font-headline-md text-headline-md text-primary uppercase">RESULTADO</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface">Desenvolva disciplina, constância e acompanhe sua evolução.</p>
+</div>
+<!-- IDENTIDADE -->
+<div class="bg-card-bg border-t border-primary p-6 rounded-lg flex flex-col items-center text-center gap-4 fade-in-up gold-glow transition-shadow duration-300 visible" style="transition-delay: 300ms;">
+<div class="w-16 h-16 rounded-full bg-background flex items-center justify-center border border-surface-variant">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: &quot;FILL&quot; 0;">account_circle</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-subtle-gray tracking-widest mb-1">— 04 —</p>
+<h3 class="font-headline-md text-headline-md text-primary uppercase">IDENTIDADE</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface">Faça da mudança parte de quem você é.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. COMO FUNCIONA? -->
+<section class="py-section-gap-mobile md:py-section-gap px-gutter max-w-container-max-width mx-auto">
+<div class="max-w-3xl mx-auto flex flex-col gap-stack-lg">
+<div class="text-center fade-in-up visible">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary uppercase">
+                        COMO FUNCIONA?
+                    </h2>
+</div>
+<div class="bg-surface-container border border-surface-variant rounded-xl p-8 md:p-12 fade-in-up visible">
+<ul class="flex flex-col gap-stack-md"><li class="flex items-start gap-4"><span class="material-symbols-outlined text-primary text-3xl mt-1">online_prediction</span><div><h4 class="font-headline-md text-headline-md text-on-surface mb-2">Acesso imediato e 100% online.</h4></div></li><li class="flex items-start gap-4"><span class="material-symbols-outlined text-primary text-3xl mt-1">pace</span><div><h4 class="font-headline-md text-headline-md text-on-surface mb-2">Estude no seu ritmo.</h4></div></li><li class="flex items-start gap-4"><span class="material-symbols-outlined text-primary text-3xl mt-1">edit_note</span><div><h4 class="font-headline-md text-headline-md text-on-surface mb-2">Exercícios práticos em cada etapa.</h4></div></li><li class="flex items-start gap-4"><span class="material-symbols-outlined text-primary text-3xl mt-1">calendar_month</span><div><h4 class="font-headline-md text-headline-md text-on-surface mb-2">Método estruturado para aproximadamente 90 dias.</h4></div></li><li class="flex items-start gap-4"><span class="material-symbols-outlined text-primary text-3xl mt-1">hub</span><div><h4 class="font-headline-md text-headline-md text-on-surface mb-2">Quatro treinamentos conectados entre si.</h4></div></li></ul>
+</div>
+<div class="text-center fade-in-up visible">
+<p class="font-body-lg text-body-lg text-primary font-bold italic">
+                        "Você entra com a vida que tem hoje. Você sai com a direção para a vida que merece ter."
+                    </p>
+</div>
+</div>
+</section>
+<!-- 7. ENCERRAMENTO -->
+<section class="py-section-gap-mobile md:py-section-gap px-gutter bg-surface-container-low border-t border-surface-variant relative overflow-hidden">
+<!-- Decorator shader -->
+<div class="absolute inset-0 opacity-10 pointer-events-none mix-blend-screen">
+
+</div>
+<div class="max-w-2xl mx-auto text-center flex flex-col gap-stack-md relative z-10 fade-in-up visible">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary uppercase">
+                    DAQUI A 90 DIAS…
+                </h2>
+<p class="font-body-lg text-body-lg text-on-surface">
+                    Você estará olhando para trás. Você pode olhar para trás com orgulho, vendo o quanto avançou, os hábitos que construiu e os resultados que alcançou. Ou pode olhar para trás com o mesmo arrependimento de sempre, desejando ter começado hoje.
+                </p>
+<p class="font-display-lg text-headline-lg md:text-display-lg text-primary font-bold mt-4">
+                    Quem você quer ser daqui a 90 dias?
+                </p>
+</div>
+</section>
+<!-- 8. FINAL CTA -->
+<section class="py-section-gap-mobile md:py-section-gap px-gutter relative flex items-center justify-center min-h-[60vh]" id="cta">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-20 filter grayscale" data-alt="A dark, moody abstract background with faint gold lighting, representing a premium, exclusive environment. High contrast, minimalist, deep blacks and subtle gold accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6dsMFwuXcOEQcJizdKiFyHw0AHEtDD_OQGPN5S7f5gG9uWZTTiqU-2THAIIq6J-kqCcw9kyco1NnczrAudIQOU6W3_Ue6h6niGcvi5GuU-SSEDHXNE3ZAhWH2rQh_29jaRXmr3eYzbmcRwdIUGfbJt39xukcmtsuouy9h_oHg14IkMaUr0OUhOQDJFu2i0vFUfXbANB1RzZ_01RtY3SZ6WkG1XjsoI1jaei__s_5gixhRmxqYj3FkuXEHEVsrlETw">
+<div class="absolute inset-0 bg-hero-gradient"></div>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center gap-stack-lg fade-in-up visible">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-display-lg md:text-display-lg text-primary uppercase tracking-tight leading-tight">
+                    A VIDA QUE VOCÊ DESEJA COMEÇA NO MOMENTO EM QUE VOCÊ DECIDE PARAR DE NEGOCIAR COM O SEU PRÓPRIO POTENCIAL.
+                </h2>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdm_M6hYDae4DBIYM6CzVYaNSHphMNjXPMi5ADybQVpLU5Hvw/viewform?usp=dialog" target="_blank" class="inline-flex items-center justify-center font-label-caps text-label-caps bg-primary-container text-black-bg font-bold rounded-lg px-10 py-5 text-lg hover:scale-105 transition-transform duration-200 gold-glow shadow-lg shadow-primary-container/20" href="#">
+                    COMEÇAR MINHA TRANSFORMAÇÃO
+                </a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-surface-variant w-full py-stack-lg">
+<div class="flex flex-col md:flex-row justify-between items-center px-gutter gap-stack-sm max-w-container-max-width mx-auto">
+<div class="font-headline-md text-headline-md text-primary font-bold tracking-tighter">
+                MÉTODO FAR
+            </div>
 <div class="flex gap-4">
-<a class="font-label-caps text-[10px] text-on-surface-variant hover:text-primary" href="#">Termos de Uso</a>
-<a class="font-label-caps text-[10px] text-on-surface-variant hover:text-primary" href="#">Privacidade</a>
-<a class="font-label-caps text-[10px] text-on-surface-variant hover:text-primary" href="#">Suporte</a>
+<a class="font-label-caps text-label-caps text-subtle-gray hover:text-white transition-colors" href="#">Termos de Uso</a>
+<a class="font-label-caps text-label-caps text-subtle-gray hover:text-white transition-colors" href="#">Política de Privacidade</a>
+<a class="font-label-caps text-label-caps text-subtle-gray hover:text-white transition-colors" href="#">Contato</a>
 </div>
+<div class="font-body-md text-body-md text-subtle-gray">
+                © 2024 Método FAR. Todos os direitos reservados.
+            </div>
 </div>
 </footer>
+<!-- Scroll Animation Script -->
 <script>
-        // Scroll Reveal Animation
-        const revealElements = document.querySelectorAll('.reveal');
-        
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, { threshold: 0.1 });
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
 
-        revealElements.forEach(el => revealObserver.observe(el));
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
 
-        // Smooth Scroll adjustment for fixed header
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
+            document.querySelectorAll('.fade-in-up').forEach((el) => {
+                observer.observe(el);
             });
         });
     </script>
+
+
 
 
 
